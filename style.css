@@ -1,0 +1,118 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+:root {
+    --light-gray_site: #cccccc;
+    --purple_site: #5b45b9;
+    --orange_site: #FF851B;
+    --red_site: #EF5350;
+    --gray_site: #5a5555;
+    --green_site: #2ECC40;
+    --white_site: #ffffff;
+}
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+}
+
+body {
+    background-color: var(--light-gray_site);
+}
+
+#content {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 800px;
+    margin: 200px auto;
+}
+#title {
+    background-color: var(--purple_site);
+    color: var(--white_site);
+    border-radius: 5px 5px 0px 0px;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 15px;
+    margin: 0 15px;
+}
+
+#list_area {
+    background-color: var(--white_site);
+    text-indent: 30px;
+    font-weight: bold;
+    margin: 0px 15px;
+}
+
+#list_area > #list{
+    list-style: none;
+}
+
+#list_area > #list > li{
+    display: grid;
+    grid-template-columns: 1fr 0fr 0fr;
+    border-bottom: 1px solid var(--light-gray_site);
+    align-items: center;
+}
+
+#list_area > #list > li > p{
+    color: var(--purple_site);
+}
+
+#list_area > #list > li > .input_text_item{
+    margin: 0px 30px 0px 30px;
+    color: var(--gray_site);
+    font-weight: bold;
+}
+
+#list_area > #list > li > .b_edit, .b_remove {
+    background-color: var(--gray_site);
+    border-width: 0px;
+    margin-left: 1px;
+    font-weight: bolder;
+    font-size: 0.8rem;
+    width: 100px;
+    height: 50px;
+    float: right;
+    transition-duration: 0.5s;
+}
+
+#list_area > #list > li > .b_edit:hover {
+    background-color: var(--orange_site);
+}
+
+#list_area > #list > li > .b_remove:hover {
+    background-color: var(--red_site);
+}
+
+#button_area {
+    background-color: var(--white_site);
+    border: 2px solid var(--purple_site);
+    border-radius: 0px 0px 5px 5px;
+    margin: auto 15px;
+    padding: 10px;
+    text-align: center;
+}
+
+#button_area > #item_tolist {
+    color: var(--white_site);
+    background-color: var(--purple_site);
+    border-radius: 5px;
+    border-width: 0px;
+    padding: 3px 10px;
+    transition-duration: 0.3s;
+}
+
+#button_area > #add {
+    border-width: 0px;
+    border-radius: 5px;
+    background-color: var(--light-gray_site);
+    color: var(--gray_site);
+    padding: 5px 10px;
+    transition-duration: 0.3s;
+}
+
+#button_area > #add:active {
+    background-color: var(--gray_site);
+    color: var(--white_site);
+}
